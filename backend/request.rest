@@ -1,0 +1,74 @@
+###Create Data
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "user",
+    "email": "user@gmail.com",
+    "password": "password",
+    "confPassword": "password",
+    "role": "user"
+}
+
+### GET ALL USERS
+GET http://localhost:5000/users
+
+### GET SINGLE USER
+GET http://localhost:5000/users/5054f3f8-6e86-4bfa-bfe0-cc4919cf5063
+
+### UPDATE USER
+PATCH  http://localhost:5000/users/5054f3f8-6e86-4bfa-bfe0-cc4919cf5063
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin"
+}
+
+### DELETE USER
+DELETE http://localhost:5000/users/d90c3810-b82d-4b7b-878f-b2734febe65a
+
+### LOGIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "password"
+}
+
+### ME
+GET http://localhost:5000/me
+
+### LOGOUT
+DELETE http://localhost:5000/logout
+
+### GET ALL PRODUCTS
+GET http://localhost:5000/products
+
+### GET SINGLE PRODUCTS
+GET http://localhost:5000/products/db7bb2c5-c54d-4ce8-a61b-206766e9918a
+
+### CREATE PRODUCT
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "product1",
+    "price": 11111
+}
+
+### UPDATE PRODUCT
+PATCH http://localhost:5000/products/7a663d6e-0b35-4dae-85f7-5fb24ed0a07a
+Content-Type: application/json
+
+{
+    "name": "cuba update",
+    "price": 2222
+}
+
+### DELETE PRODUCT
+DELETE http://localhost:5000/products/4a0cff5c-ac00-47c7-8cf8-0758c2bce47b
